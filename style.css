@@ -1,0 +1,174 @@
+body {
+    margin: 0;
+    font-family: "Lato", sans-serif;
+}
+
+p,
+.sub_content>p:first-child,
+a {
+    font-size: 0.67em;
+}
+
+div>p:first-child {
+    font-weight: bold;
+    font-size: 0.8em;
+}
+
+.sidebar {
+    margin: 0;
+    padding: 0;
+    width: 150px;
+    background-color: black;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+}
+
+.sidebar a {
+    text-decoration: none;
+    display: block;
+    color: grey;
+    padding: 16px;
+    border-bottom: 1px solid gray;
+}
+
+.sidebar a.active {
+    color: white;
+}
+
+.sidebar a:hover {
+    background-color: #555;
+    color: white;
+}
+
+.content {
+    margin-left: 150px;
+    padding: 1px 16px;
+    text-align: center;
+}
+
+header>img {
+    width: 183px;
+    height: 71.5px;
+    margin-top: 10px;
+}
+
+.sub_content {
+    background-color: rgb(232, 232, 232);
+    padding: 10px 150px;
+    margin: 30px 70px;
+}
+
+.main_content {
+    display: flex;
+}
+
+.css,
+.html,
+.url {
+    flex-basis: 33%;
+    text-align: left;
+}
+
+.css {
+    margin-left: 70px;
+}
+
+.html {
+    padding: 0px 10px;
+}
+
+.url {
+    margin-right: 70px;
+}
+
+.css>img,
+.html>img,
+.url>img {
+    margin-left: -11px;
+    width: 75px;
+    height: 75px;
+    float: left;
+    overflow: auto;
+}
+
+footer {
+    text-align: left;
+    margin: 100px -20px;
+    border-top: 1px solid lightgray;
+}
+
+footer>p {
+    margin-left: 90px;
+}
+
+@media screen and (max-width: 1024px) {
+    .content,
+    a {
+        text-align: center;
+        font-size: 1.2em;
+    }
+    .main_content {
+        flex-wrap: wrap;
+    }
+    .css,
+    .html,
+    .url {
+        flex-basis: 100%;
+        text-align: justify;
+        margin: 0px;
+        padding: 0px 70px;
+    }
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+    .sidebar a {
+        float: left;
+        display: inline;
+    }
+    div.content {
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .content,
+    a {
+        margin-left: 0px;
+        padding: 0px;
+        text-align: center;
+        font-size: 1.5em;
+    }
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        margin: 0px;
+        padding: 0px;
+    }
+    .sidebar a {
+        float: center;
+        display: inline;
+    }
+    .sub_content {
+        padding: 40px;
+        text-align: justify;
+        margin: 40px 30px;
+    }
+    .main_content {
+        flex-wrap: wrap;
+    }
+    .css,
+    .html,
+    .url {
+        flex-basis: 100%;
+        text-align: justify;
+        margin: 0px;
+        padding: 0px 20px;
+    }
+    footer>p {
+        margin-left: 40px;
+    }
+}
